@@ -90,8 +90,8 @@ Route::get('/user', function (Request $request) {
 //             with Controller
 
 Route::prefix('books')->group(function () {
-    Route::post('store', [BookController::class, 'store']);
-    Route::get('', [BookController::class, 'index']);
+    Route::post('/store', [BookController::class, 'store']);
+    Route::get('/index', [BookController::class, 'index']);
     Route::get('/show/{book}', [BookController::class, 'show']);
     Route::put('update/{book}', [BookController::class, 'update']);
     Route::delete('/destroy/{book}', [BookController::class, 'destroy']);
